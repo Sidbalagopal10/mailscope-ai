@@ -193,3 +193,6 @@ token.json
 token.json.*
 token.*.json
 *.oauth.json
+
+# Generated benchmark reports
+/data/benchmarking/reports/
