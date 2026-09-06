@@ -40,7 +40,7 @@ data/*.db
 models/candidates/
 models/archive/
 data/continuous_learning_state.json
-reports/
+/reports/
 data/gmail_accounts/
 *.token.json
 data/domain_trust.db
@@ -169,7 +169,7 @@ data/organization_intelligence/downloads/
 
 # Generated reports / local runtime data
 data/investigations/
-reports/
+/reports/
 logs/
 
 # Temporary and backup source files
