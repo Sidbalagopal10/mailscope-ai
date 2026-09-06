@@ -2,6 +2,10 @@
 
 **AI-Assisted Email Threat Detection & SOC Investigation Platform**
 
+### [Try MailScope AI Live](https://mailscope-ai.onrender.com)
+
+No installation is required for the hosted portfolio demo. The free hosting instance may require a short cold start after a period of inactivity.
+
 MailScope AI is a cybersecurity portfolio project for analyzing suspicious emails and URLs and turning security evidence into a structured SOC investigation workflow.
 
 It combines deterministic phishing detection, identity intelligence, threat enrichment, evidence-grounded analysis, campaign correlation, threat hunting, case management, threat graphs, and a grounded SOC Copilot.
