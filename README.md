@@ -12,6 +12,16 @@ It combines deterministic phishing detection, identity intelligence, threat enri
 
 > AI assists the analyst. It does not override deterministic security evidence or invent unsupported conclusions.
 
+## Screenshots
+
+### SOC Investigation Workspace
+
+![MailScope AI SOC Investigation Workspace](screenshots/mailscope-soc-workspace.png)
+
+### Evidence-Grounded Investigation
+
+![MailScope AI Investigation Results](screenshots/mailscope-investigation.png)
+
 ## Key Capabilities
 
 - Email and suspicious URL analysis
