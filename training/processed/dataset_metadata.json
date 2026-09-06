@@ -1,0 +1,11 @@
+{
+  "raw_file": "training/raw/malicious_phish.csv",
+  "processed_file": "training/processed/phishing_url_dataset.csv",
+  "original_records": 651191,
+  "processed_records": 294065,
+  "benign_records": 200000,
+  "phishing_records": 94065,
+  "excluded_non_binary_records": 128977,
+  "duplicates_removed": 48,
+  "random_seed": 42
+}

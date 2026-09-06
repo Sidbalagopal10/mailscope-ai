@@ -1,0 +1,170 @@
+[
+  {
+    "id": "Q1001",
+    "labels": {
+      "en": {
+        "language": "en",
+        "value": "Example University"
+      }
+    },
+    "aliases": {
+      "en": [
+        {
+          "language": "en",
+          "value": "Example U"
+        }
+      ]
+    },
+    "claims": {
+      "P31": [
+        {
+          "mainsnak": {
+            "datavalue": {
+              "value": {
+                "entity-type": "item",
+                "numeric-id": 3918,
+                "id": "Q3918"
+              }
+            }
+          }
+        }
+      ],
+      "P856": [
+        {
+          "mainsnak": {
+            "datavalue": {
+              "value": "https://www.example.edu/"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "Q1002",
+    "labels": {
+      "en": {
+        "language": "en",
+        "value": "Example Hospital"
+      }
+    },
+    "aliases": {},
+    "claims": {
+      "P31": [
+        {
+          "mainsnak": {
+            "datavalue": {
+              "value": {
+                "entity-type": "item",
+                "numeric-id": 16917,
+                "id": "Q16917"
+              }
+            }
+          }
+        }
+      ],
+      "P856": [
+        {
+          "mainsnak": {
+            "datavalue": {
+              "value": "https://hospital.example.org/"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "Q1003",
+    "labels": {
+      "en": {
+        "language": "en",
+        "value": "No Website Organization"
+      }
+    },
+    "aliases": {},
+    "claims": {
+      "P31": [
+        {
+          "mainsnak": {
+            "datavalue": {
+              "value": {
+                "entity-type": "item",
+                "numeric-id": 783794,
+                "id": "Q783794"
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "Q1004",
+    "labels": {
+      "en": {
+        "language": "en",
+        "value": "Example Football Club"
+      }
+    },
+    "aliases": {},
+    "claims": {
+      "P31": [
+        {
+          "mainsnak": {
+            "datavalue": {
+              "value": {
+                "entity-type": "item",
+                "numeric-id": 476028,
+                "id": "Q476028"
+              }
+            }
+          }
+        }
+      ],
+      "P856": [
+        {
+          "mainsnak": {
+            "datavalue": {
+              "value": "https://www.examplefc.co.uk/"
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "Q1005",
+    "labels": {
+      "en": {
+        "language": "en",
+        "value": "Unknown Category Organization"
+      }
+    },
+    "aliases": {},
+    "claims": {
+      "P31": [
+        {
+          "mainsnak": {
+            "datavalue": {
+              "value": {
+                "entity-type": "item",
+                "numeric-id": 999999,
+                "id": "Q999999"
+              }
+            }
+          }
+        }
+      ],
+      "P856": [
+        {
+          "mainsnak": {
+            "datavalue": {
+              "value": "https://unknown-sector.example/"
+            }
+          }
+        }
+      ]
+    }
+  }
+]

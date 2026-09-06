@@ -1,0 +1,394 @@
+{
+  "dataset_name": "Email Security Regression Benchmark",
+  "version": "1.0.0",
+  "description": "Deterministic regression cases covering legitimate urgency, phishing, BEC, spoofing, malicious URLs, brand impersonation and operational email.",
+  "limitations": [
+    "This is a curated regression benchmark, not an independent real-world corpus.",
+    "Threat-intelligence responses are simulated deterministically.",
+    "Results must not be presented as production detection accuracy.",
+    "Real Gmail evaluation and human-reviewed holdout data remain necessary."
+  ],
+  "cases": [
+    {
+      "id": "legit-university-assignment",
+      "category": "legitimate_academic_urgency",
+      "label": 0,
+      "subject": "Urgent: Assignment due tonight",
+      "body": "Please submit Assignment 3 through Blackboard by 11:59 PM tonight.",
+      "sender": "Professor <professor@example.edu>",
+      "authentication": "pass",
+      "known_sender": true,
+      "existing_thread": true,
+      "sender_domain_verified": true,
+      "urls": [],
+      "attachment_risk_score": 0,
+      "mock_deep": null
+    },
+    {
+      "id": "legit-last-minute-meeting",
+      "category": "legitimate_workplace_urgency",
+      "label": 0,
+      "subject": "Meeting moved to 3 PM today",
+      "body": "The client moved our meeting to 3 PM. Please join using the regular company calendar invitation.",
+      "sender": "Manager <manager@example.com>",
+      "authentication": "pass",
+      "known_sender": true,
+      "existing_thread": true,
+      "sender_domain_verified": true,
+      "urls": [],
+      "attachment_risk_score": 0,
+      "mock_deep": null
+    },
+    {
+      "id": "legit-office-closure",
+      "category": "legitimate_notice",
+      "label": 0,
+      "subject": "Urgent office closure notice",
+      "body": "The office will close at 2 PM because of severe weather.",
+      "sender": "Facilities <facilities@example.com>",
+      "authentication": "pass",
+      "known_sender": true,
+      "existing_thread": false,
+      "sender_domain_verified": true,
+      "urls": [],
+      "attachment_risk_score": 0,
+      "mock_deep": null
+    },
+    {
+      "id": "legit-newsletter",
+      "category": "legitimate_newsletter",
+      "label": 0,
+      "subject": "Weekly cybersecurity newsletter",
+      "body": "Here are this week's security articles and training resources.",
+      "sender": "Newsletter <news@example.org>",
+      "authentication": "pass",
+      "known_sender": true,
+      "existing_thread": false,
+      "sender_domain_verified": true,
+      "urls": [
+        "https://example.org/newsletter"
+      ],
+      "attachment_risk_score": 0,
+      "mock_deep": {
+        "final_score": 4,
+        "official_domain_match": true,
+        "brand_impersonation": false,
+        "threatfox_match": false,
+        "virustotal_malicious": 0
+      }
+    },
+    {
+      "id": "legit-password-reset-notification",
+      "category": "legitimate_account_notice",
+      "label": 0,
+      "subject": "Your password was changed",
+      "body": "This is a notification that your password was changed. Contact support through the official portal if this was not you.",
+      "sender": "Security <security@example.com>",
+      "authentication": "pass",
+      "known_sender": true,
+      "existing_thread": false,
+      "sender_domain_verified": true,
+      "urls": [
+        "https://example.com/security"
+      ],
+      "attachment_risk_score": 0,
+      "mock_deep": {
+        "final_score": 5,
+        "official_domain_match": true,
+        "brand_impersonation": false,
+        "threatfox_match": false,
+        "virustotal_malicious": 0
+      }
+    },
+    {
+      "id": "legit-invoice-existing-vendor",
+      "category": "legitimate_invoice",
+      "label": 0,
+      "subject": "Invoice 4832 for July services",
+      "body": "Attached is the July invoice under our existing contract. Payment terms remain net 30.",
+      "sender": "Vendor Billing <billing@vendor.example>",
+      "authentication": "pass",
+      "known_sender": true,
+      "existing_thread": true,
+      "sender_domain_verified": true,
+      "urls": [],
+      "attachment_risk_score": 5,
+      "mock_deep": null
+    },
+    {
+      "id": "legit-calendar-invite",
+      "category": "legitimate_meeting",
+      "label": 0,
+      "subject": "Updated calendar invitation",
+      "body": "The meeting location has changed. See the updated calendar event.",
+      "sender": "Colleague <colleague@example.com>",
+      "authentication": "pass",
+      "known_sender": true,
+      "existing_thread": true,
+      "sender_domain_verified": true,
+      "urls": [],
+      "attachment_risk_score": 0,
+      "mock_deep": null
+    },
+    {
+      "id": "legit-job-application",
+      "category": "legitimate_recruiting",
+      "label": 0,
+      "subject": "Interview availability",
+      "body": "Please provide your availability for a thirty-minute interview next week.",
+      "sender": "Recruiter <recruiter@company.example>",
+      "authentication": "pass",
+      "known_sender": false,
+      "existing_thread": true,
+      "sender_domain_verified": true,
+      "urls": [],
+      "attachment_risk_score": 0,
+      "mock_deep": null
+    },
+    {
+      "id": "legit-forwarded-message",
+      "category": "legitimate_forwarded_mail",
+      "label": 0,
+      "subject": "Fwd: Department announcement",
+      "body": "Forwarding the department announcement for your information. No action is required.",
+      "sender": "Student <student@example.edu>",
+      "authentication": "unknown",
+      "known_sender": true,
+      "existing_thread": true,
+      "sender_domain_verified": false,
+      "urls": [],
+      "attachment_risk_score": 0,
+      "mock_deep": null
+    },
+    {
+      "id": "legit-new-startup-domain",
+      "category": "legitimate_new_domain",
+      "label": 0,
+      "subject": "Product demonstration follow-up",
+      "body": "Thank you for attending our demonstration. Here is the product documentation discussed during the meeting.",
+      "sender": "Founder <founder@newstartup.example>",
+      "authentication": "pass",
+      "known_sender": false,
+      "existing_thread": true,
+      "sender_domain_verified": true,
+      "urls": [
+        "https://newstartup.example/docs"
+      ],
+      "attachment_risk_score": 0,
+      "mock_deep": {
+        "final_score": 18,
+        "official_domain_match": false,
+        "brand_impersonation": false,
+        "threatfox_match": false,
+        "virustotal_malicious": 0
+      }
+    },
+
+    {
+      "id": "phish-credential-raw-ip",
+      "category": "credential_phishing",
+      "label": 1,
+      "subject": "URGENT: Verify your account",
+      "body": "Your account will be suspended. Log in immediately and verify your password.",
+      "sender": "IT Support <support@example.edu>",
+      "authentication": "fail",
+      "known_sender": false,
+      "existing_thread": false,
+      "sender_domain_verified": false,
+      "urls": [
+        "http://192.0.2.5/verify-password"
+      ],
+      "attachment_risk_score": 0,
+      "mock_deep": {
+        "final_score": 88,
+        "official_domain_match": false,
+        "brand_impersonation": false,
+        "threatfox_match": false,
+        "virustotal_malicious": 8
+      }
+    },
+    {
+      "id": "phish-gift-card-bec",
+      "category": "business_email_compromise",
+      "label": 1,
+      "subject": "Urgent confidential request",
+      "body": "Buy five gift cards immediately. Keep this confidential and send me the codes.",
+      "sender": "Manager <manager@example.com>",
+      "authentication": "pass",
+      "known_sender": true,
+      "existing_thread": false,
+      "sender_domain_verified": true,
+      "urls": [],
+      "attachment_risk_score": 0,
+      "mock_deep": null
+    },
+    {
+      "id": "phish-wire-transfer",
+      "category": "invoice_fraud",
+      "label": 1,
+      "subject": "Confidential payment change",
+      "body": "Keep this confidential. The bank account changed. Send the wire transfer today to the new account.",
+      "sender": "Finance Director <finance@example.com>",
+      "authentication": "pass",
+      "known_sender": true,
+      "existing_thread": false,
+      "sender_domain_verified": true,
+      "urls": [],
+      "attachment_risk_score": 0,
+      "mock_deep": null
+    },
+    {
+      "id": "phish-microsoft-lookalike",
+      "category": "brand_impersonation",
+      "label": 1,
+      "subject": "Microsoft account verification",
+      "body": "Your Microsoft account requires immediate verification. Sign in using the link below.",
+      "sender": "Microsoft Security <security@microsooft.example>",
+      "authentication": "fail",
+      "known_sender": false,
+      "existing_thread": false,
+      "sender_domain_verified": false,
+      "urls": [
+        "https://microsoft-login.microsooft.example/"
+      ],
+      "attachment_risk_score": 0,
+      "mock_deep": {
+        "final_score": 82,
+        "official_domain_match": false,
+        "brand_impersonation": true,
+        "threatfox_match": false,
+        "virustotal_malicious": 3
+      }
+    },
+    {
+      "id": "phish-google-lookalike",
+      "category": "brand_impersonation",
+      "label": 1,
+      "subject": "Google security alert",
+      "body": "Unusual login detected. Confirm your credentials now to avoid account suspension.",
+      "sender": "Google <security@google-account-alert.example>",
+      "authentication": "fail",
+      "known_sender": false,
+      "existing_thread": false,
+      "sender_domain_verified": false,
+      "urls": [
+        "https://google-account-alert.example/login"
+      ],
+      "attachment_risk_score": 0,
+      "mock_deep": {
+        "final_score": 86,
+        "official_domain_match": false,
+        "brand_impersonation": true,
+        "threatfox_match": false,
+        "virustotal_malicious": 6
+      }
+    },
+    {
+      "id": "phish-malware-link",
+      "category": "malware_delivery",
+      "label": 1,
+      "subject": "Shared document",
+      "body": "A document has been shared with you. Open it to review the confidential file.",
+      "sender": "Documents <documents@unknown.example>",
+      "authentication": "unknown",
+      "known_sender": false,
+      "existing_thread": false,
+      "sender_domain_verified": false,
+      "urls": [
+        "https://malware-host.example/payload"
+      ],
+      "attachment_risk_score": 25,
+      "mock_deep": {
+        "final_score": 91,
+        "official_domain_match": false,
+        "brand_impersonation": false,
+        "threatfox_match": true,
+        "virustotal_malicious": 12
+      }
+    },
+    {
+      "id": "phish-fake-payroll",
+      "category": "credential_phishing",
+      "label": 1,
+      "subject": "Payroll account update required",
+      "body": "Update your payroll credentials immediately to prevent delayed salary payment.",
+      "sender": "Payroll <payroll@employee-payroll.example>",
+      "authentication": "fail",
+      "known_sender": false,
+      "existing_thread": false,
+      "sender_domain_verified": false,
+      "urls": [
+        "https://employee-payroll.example/verify"
+      ],
+      "attachment_risk_score": 0,
+      "mock_deep": {
+        "final_score": 77,
+        "official_domain_match": false,
+        "brand_impersonation": true,
+        "threatfox_match": false,
+        "virustotal_malicious": 2
+      }
+    },
+    {
+      "id": "phish-fake-shared-drive",
+      "category": "credential_phishing",
+      "label": 1,
+      "subject": "File shared with you",
+      "body": "Sign in to view the protected document. Access expires in one hour.",
+      "sender": "Drive Sharing <sharing@drive-access.example>",
+      "authentication": "fail",
+      "known_sender": false,
+      "existing_thread": false,
+      "sender_domain_verified": false,
+      "urls": [
+        "https://drive-access.example/secure-login"
+      ],
+      "attachment_risk_score": 0,
+      "mock_deep": {
+        "final_score": 75,
+        "official_domain_match": false,
+        "brand_impersonation": true,
+        "threatfox_match": false,
+        "virustotal_malicious": 1
+      }
+    },
+    {
+      "id": "phish-compromised-manager-account",
+      "category": "compromised_account_bec",
+      "label": 1,
+      "subject": "Need this handled now",
+      "body": "Do not call me. Purchase prepaid cards immediately and send photographs of the codes.",
+      "sender": "Manager <manager@example.com>",
+      "authentication": "pass",
+      "known_sender": true,
+      "existing_thread": false,
+      "sender_domain_verified": true,
+      "urls": [],
+      "attachment_risk_score": 0,
+      "mock_deep": null
+    },
+    {
+      "id": "phish-tax-refund",
+      "category": "financial_phishing",
+      "label": 1,
+      "subject": "Tax refund pending",
+      "body": "Confirm your bank details and password immediately to receive your refund.",
+      "sender": "Revenue Service <refund@revenue-refund.example>",
+      "authentication": "fail",
+      "known_sender": false,
+      "existing_thread": false,
+      "sender_domain_verified": false,
+      "urls": [
+        "https://revenue-refund.example/account-update"
+      ],
+      "attachment_risk_score": 0,
+      "mock_deep": {
+        "final_score": 80,
+        "official_domain_match": false,
+        "brand_impersonation": true,
+        "threatfox_match": false,
+        "virustotal_malicious": 5
+      }
+    }
+  ]
+}

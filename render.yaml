@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: mailscope-ai
+    runtime: python
+    plan: free
+
+    buildCommand: pip install -r requirements.txt
+    startCommand: ./start_cloud.sh
+
+    envVars:
+      - key: APP_NAME
+        value: MailScope AI
+
+      - key: APP_ENV
+        value: production
+
+      - key: PYTHON_VERSION
+        value: 3.12.12

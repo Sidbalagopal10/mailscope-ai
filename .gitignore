@@ -1,0 +1,195 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Virtual environment
+.venv/
+venv/
+
+# Secrets
+.env
+credentials.json
+token.pkl
+*.pickle
+
+# Databases
+*.db
+*.sqlite
+*.sqlite3
+
+# Machine-learning files
+training/data/*
+!training/data/.gitkeep
+training/models/*
+!training/models/.gitkeep
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+token.json
+token.*.json
+logs/
+data/*.db
+models/candidates/
+models/archive/
+data/continuous_learning_state.json
+reports/
+data/gmail_accounts/
+*.token.json
+data/domain_trust.db
+data/domain_trust.db-*
+
+# Gmail OAuth and secrets
+.env.local
+
+# User Gmail accounts
+data/*.db-*
+
+# Runtime data
+screenshots/private/
+continuous_learning_state.json
+
+# Local models and datasets
+training/raw/
+training/processed/*.csv
+training/processed/*.parquet
+
+# Python
+
+# macOS and editors
+
+# Temporary files and backups
+*.before_*
+*.backup
+*.bak
+accuracy_review/
+accuracy_review.tar.gz
+data/organization_intelligence/organization_intelligence.db
+data/organization_intelligence/organization_intelligence.db-*
+data/organization_intelligence/imports/*.csv
+data/domain_intelligence/domain_intelligence.db
+data/domain_intelligence/domain_intelligence.db-*
+data/domain_intelligence/certificate_transparency.db
+data/domain_intelligence/certificate_transparency.db-*
+data/dns_intelligence/dns_intelligence.db
+data/dns_intelligence/dns_intelligence.db-*
+data/brand_intelligence/global_brand_index.db
+data/brand_intelligence/global_brand_index.db-*
+data/network_intelligence/ip_asn_intelligence.db
+data/network_intelligence/ip_asn_intelligence.db-*
+data/threat_intelligence/threatfox.db
+data/threat_intelligence/threatfox.db-*
+data/gmail_observation/latest_observation.json
+app/gmail/token.json
+app/gmail/credentials.json
+data/gmail_actions/latest_label_plan.json
+data/gmail_actions/label_execution_audit.jsonl
+data/gmail_feedback/reviews.db
+data/gmail_feedback/reviews.db-*
+data/gmail_feedback/reviewed_training_examples.jsonl
+data/model_governance/latest_calibration_report.json
+data/model_governance/candidates/
+data/threat_intelligence/virustotal.db
+data/threat_intelligence/virustotal.db-*
+data/evaluation/latest_benchmark_report.json
+data/investigations/
+
+# ============================================================
+# Repository hygiene
+# ============================================================
+
+# Runtime state
+.pids/
+*.pid
+
+# Local development backups
+accuracy_review 2/
+accuracy_v1_backup/
+backups/
+corroboration_engine_backup/
+evidence_engine_backup/
+evidence_engine_complete_backup/
+
+# Generic backup directories/files
+*_backup/
+*_backup*/
+*.pre_*
+*.orig
+
+# Local caches
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Generated temporary artifacts
+tmp/
+temp/
+
+# Local rehearsal databases and generated rehearsal state
+data/rehearsal/*.db
+data/rehearsal/*.db-*
+
+# Local benchmark databases
+data/benchmarking/**/*.db
+data/benchmarking/**/*.db-*
+
+# OAuth credential backups / expired tokens
+token.json.expired_*
+token.json.*
+credentials.json.*
+*.oauth.json
+
+# Large downloaded intelligence datasets
+data/global_entity_registry/downloads/
+data/global_entity_registry/gleif/*.zip
+data/global_entity_registry/wikidata/*.bz2
+data/organization_intelligence/downloads/*.zip
+
+# Generated intelligence / rehearsal artifacts
+data/rehearsal/
+data/diagnostics/
+data/shadow_evaluation/
+data/website_relationships/
+data/global_entity_registry/checkpoints/
+data/global_entity_registry/wikidata/*stats*.json
+
+# Downloaded bulk intelligence datasets
+data/global_entity_registry/downloads/
+data/global_entity_registry/gleif/
+data/global_entity_registry/wikidata/*.bz2
+data/organization_intelligence/downloads/
+
+# Generated reports / local runtime data
+data/investigations/
+reports/
+logs/
+
+# Temporary and backup source files
+*.broken_*
+*.syntax_backup_*
+*.pre_*
+*.bak
+*.backup
+
+# Python/runtime junk
+__pycache__/
+.pytest_cache/
+.coverage
+htmlcov/
+*.pid
+
+# OAuth credentials and token backups
+credentials.json
+credentials.json.*
+token.json
+token.json.*
+token.*.json
+*.oauth.json

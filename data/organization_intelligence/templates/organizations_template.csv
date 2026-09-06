@@ -1,0 +1,2 @@
+legal_name,entity_type,domain,source_name,source_type,source_record_id,source_url,authoritative_source,country_code,jurisdiction,registration_status,identity_state,security_state,identity_confidence,security_confidence,domain_relationship,evidence_type,evidence_value
+Example University,university,example.edu,Official Education Registry,education_registry,12345,https://registry.example/12345,true,US,Example State,active,PROVISIONAL,NEUTRAL,70,25,reported,registry_domain_association,example.edu

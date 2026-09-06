@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LEIRecords xmlns="http://www.gleif.org/data/schema/leidata/2016">
+  <LEIRecord>
+    <LEI>5493001KJTIIGC8Y1R12</LEI>
+
+    <Entity>
+      <LegalName xml:lang="en">
+        EXAMPLE CORPORATION
+      </LegalName>
+
+      <OtherEntityNames>
+        <OtherEntityName
+          type="TRADING_OR_OPERATING_NAME"
+          xml:lang="en">
+          Example Corp
+        </OtherEntityName>
+      </OtherEntityNames>
+
+      <LegalAddress>
+        <City>Wilmington</City>
+        <Region>US-DE</Region>
+        <Country>US</Country>
+      </LegalAddress>
+
+      <HeadquartersAddress>
+        <City>San Francisco</City>
+        <Region>US-CA</Region>
+        <Country>US</Country>
+      </HeadquartersAddress>
+
+      <RegistrationAuthority>
+        <RegistrationAuthorityID>
+          RA000602
+        </RegistrationAuthorityID>
+
+        <RegistrationAuthorityEntityID>
+          1234567
+        </RegistrationAuthorityEntityID>
+      </RegistrationAuthority>
+
+      <LegalJurisdiction>
+        US-DE
+      </LegalJurisdiction>
+
+      <EntityStatus>
+        ACTIVE
+      </EntityStatus>
+    </Entity>
+
+    <Registration>
+      <InitialRegistrationDate>
+        2020-01-01T00:00:00Z
+      </InitialRegistrationDate>
+
+      <LastUpdateDate>
+        2026-01-01T00:00:00Z
+      </LastUpdateDate>
+
+      <NextRenewalDate>
+        2027-01-01T00:00:00Z
+      </NextRenewalDate>
+
+      <ManagingLOU>
+        TESTLOU123
+      </ManagingLOU>
+    </Registration>
+  </LEIRecord>
+</LEIRecords>

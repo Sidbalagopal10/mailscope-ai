@@ -1,0 +1,73 @@
+{
+  "model_version": "accuracy-v2-2026.07.31.233303",
+  "model_type": "HistGradientBoostingClassifier",
+  "trained_at": "2026-07-31T23:33:03.240586+00:00",
+  "dataset_records": 294141,
+  "training_records": 200034,
+  "calibration_records": 46108,
+  "testing_records": 47999,
+  "hostname_overlap": 0,
+  "feature_count": 36,
+  "feature_names": [
+    "url_length",
+    "hostname_length",
+    "registered_domain_length",
+    "path_length",
+    "query_length",
+    "count_digits",
+    "count_letters",
+    "count_subdomains",
+    "count_path_segments",
+    "count_query_parameters",
+    "uses_https",
+    "uses_http",
+    "hostname_is_ip",
+    "uses_url_shortener",
+    "is_tracking_domain",
+    "contains_punycode",
+    "contains_encoded_characters",
+    "contains_double_slash_in_path",
+    "contains_suspicious_port",
+    "count_high_signal_keywords",
+    "count_business_keywords",
+    "count_suspicious_keywords",
+    "brand_impersonation",
+    "brand_similarity",
+    "brand_risk_severity",
+    "count_at_symbols",
+    "count_hyphens",
+    "count_underscores",
+    "count_equals",
+    "count_question_marks",
+    "count_ampersands",
+    "count_percent_symbols",
+    "count_dots",
+    "digit_ratio",
+    "special_character_ratio",
+    "query_to_url_ratio"
+  ],
+  "decision_threshold": 0.666667,
+  "target_precision": 0.9,
+  "metrics": {
+    "accuracy": 0.843955,
+    "precision": 0.961338,
+    "recall": 0.57399,
+    "f1_score": 0.718802,
+    "roc_auc": 0.957813,
+    "average_precision": 0.924044,
+    "true_negatives": 30936,
+    "false_positives": 385,
+    "false_negatives": 7105,
+    "true_positives": 9573,
+    "confusion_matrix": [
+      [
+        30936,
+        385
+      ],
+      [
+        7105,
+        9573
+      ]
+    ]
+  }
+}

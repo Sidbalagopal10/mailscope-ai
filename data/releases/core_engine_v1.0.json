@@ -1,0 +1,68 @@
+{
+  "release": "core-engine-v1.0",
+  "release_status": "RELEASED",
+  "feature_status": "FROZEN",
+
+  "purpose": "Explainable identity-aware phishing URL risk core",
+
+  "core_principles": [
+    "Unknown identity is neutral",
+    "Identity conflict is neutral with respect to phishing",
+    "Verified identity is not an allowlist",
+    "Supported identity is not an allowlist",
+    "Independent malicious evidence survives trusted identity",
+    "Impersonation requires corroboration before identity-based escalation",
+    "Shared legitimate web presence is not treated as conflicting ownership"
+  ],
+
+  "validated_integration": {
+    "identity_policy": "corroborated-impersonation",
+    "production_callable": "app.services.risk_engine.analyze_url",
+    "integration_status": "active"
+  },
+
+  "pre_v1_holdout": {
+    "benign_samples": 500,
+    "phishing_samples": 300,
+
+    "true_positive": 3,
+    "true_negative": 500,
+    "false_positive": 0,
+    "false_negative": 297,
+
+    "recall": 0.01,
+    "precision": 1.0,
+    "f1": 0.0198,
+    "false_positive_rate": 0.0
+  },
+
+  "core_v1_holdout": {
+    "benign_samples": 500,
+    "phishing_samples": 300,
+
+    "true_positive": 35,
+    "true_negative": 500,
+    "false_positive": 0,
+    "false_negative": 265,
+
+    "recall": 0.1167,
+    "precision": 1.0,
+    "f1": 0.209,
+    "false_positive_rate": 0.0
+  },
+
+  "measured_improvement": {
+    "additional_true_positives": 32,
+    "additional_false_positives": 0,
+    "recall_absolute_gain": 0.1067,
+    "f1_absolute_gain": 0.1892
+  },
+
+  "known_limitations": [
+    "11.67% phishing recall is not production-grade coverage",
+    "Current benchmark is a limited 500 benign / 300 phishing holdout",
+    "Identity registry coverage is incomplete",
+    "Core v1 does not represent the full investigation capabilities of the platform",
+    "Future intelligence should be orchestrated by the analyst layer rather than added as ad-hoc URL scoring rules"
+  ]
+}
